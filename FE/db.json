@@ -1,0 +1,74 @@
+{
+  "catelogy":[
+    {"id":1,
+      "name":"zingnew"
+    
+    
+    },
+    
+      {"id":2,
+
+        "name":"Dân Trí "
+      
+      
+      },
+    
+        {"id":3,
+          "name":"Phát"
+        
+        
+        },
+          {"id":4,
+            "name":"Lưu"
+          
+          }
+
+  ],
+
+  "bannerposit":
+  [{
+    "bannerId":1,
+   "bannerName": "trang top1",
+    "width":"700",
+    "height":"800",
+    "min_price": 300,
+    "thumbnail" :"../assets/images/product2-3.jpg",
+    "webid":1
+    
+  },
+  {
+    "bannerId":4,
+   "bannerName": "trang top2",
+    "width":"700",
+    "height":"800",
+    "min_price": 300,
+    "thumbnail" :"../assets/images/product2-3.jpg",
+    "webid":1
+    
+  },
+  {
+    "bannerId":2,
+   "bannerName": "trang top3",
+    "width":"700",
+    "height":"800",
+    "min_price": 300,
+    "thumbnail" :"../assets/images/product2-3.jpg",
+    "webid":1
+    
+  },
+  {
+    "bannerId":3,
+   "bannerName": "trang top",
+    "width":"700",
+    "height":"800",
+    "min_price": 300,
+    "thumbnail" :"../assets/images/product2-3.jpg",
+    "webid":1
+    
+  }
+  ]
+
+
+  
+}
+

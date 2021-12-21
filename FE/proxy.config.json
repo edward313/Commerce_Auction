@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+      "target": "https://ecbe.herokuapp.com",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/proxy": ""
+      }
+    }
+  }

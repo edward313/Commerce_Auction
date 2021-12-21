@@ -1,0 +1,58 @@
+<section class="item content">
+  <div class="container">
+    <div class="underlined-title">
+      <div class="editContent">
+        <h1 class="text-center latestitems">Các vị trí banner mới nhất</h1>
+      </div>
+      <div class="wow-hr type_short">
+        <span class="wow-hr-h">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </span>
+      </div>
+    </div>
+
+
+
+    <div class="column" *ngFor=" let Bannerposit of  Bannener | slice:0:gioihan; let i=index">
+      <div class="col-md-4" *ngIf="Bannerposit.auction_status==1&&Bannerposit.auction_date!=null">
+        <div>
+          <!-- <div class="col-md-4" *ngFor=" let Web of  WebData | slice:0:3; let j=index"></div> -->
+          <div class="productbox">
+            <div class="fadeshop">
+              <div class="captionshop text-center">
+                <h3>{{Bannerposit.name}}</h3>
+                <p class='info_banner'>
+                  {{Bannerposit.width}} x {{Bannerposit.height}}
+                </p>
+                <!-- <p class="des_banner">
+								Nằm trên top.
+							</p>  -->
+                <!-- (click)="Testchuyentrang(Bannerposit.id) -->
+                <p>
+                  <a (click)=Testchuyentrang(Bannerposit.id) style="cursor:pointer;" class="learn-more detailslearn"><i
+                      class="fa fa-shopping-cart"></i> Đấugiá</a>
+                  <a (click)=Testchuyentrang(Bannerposit.id) style="cursor:pointer;" class="learn-more detailslearn"><i
+                      class="fa fa-link"></i> Chi tiết</a>
+                </p>
+              </div>
+              <span class="maxproduct"><img src="../assets/images/product1-1.jpg" alt=""></span>
+            </div>
+            <div class="product-details">
+              <a href="#">
+                <h1>{{Bannerposit.name}}</h1>
+              </a>
+              <p class="name_web">{{WebData[i].name}}</p>
+              <span class="price">
+                <span class="edd_price">Bắt đầu: {{ngaybatdau[i]}} vào lúc {{giobatdau[i]}}</span>
+              </span>
+              <span class="price">
+                <p class="edd_price">Kết thúc: {{ngayend[i]}} vào lúc {{gioend[i]}}</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>

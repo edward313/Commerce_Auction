@@ -1,0 +1,69 @@
+<!-- CONTENT =============================-->
+<app-header></app-header>
+
+<section class="item content">
+  <div class="container toparea">
+    <div class="underlined-title">
+      <div class="editContent">
+        <h1 class="text-center latestitems">{{bannerPosit.name}}</h1>
+      </div>
+      <div class="wow-hr type_short">
+        <span class="wow-hr-h">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="productbox">
+          <img src="../assets/images/product2-3.jpg" alt="">
+          <div class="clearfix">
+          </div>
+          <br />
+          <div class="product-details text-left">
+            <p>
+              Kích thước: {{bannerPosit.width}} x {{bannerPosit.height}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="properties-box">
+          <span class="product-bidders">Bidders:</span>
+          <ul class="unstyle" *ngIf="check==false;">
+            <span class="propertyname">Không có người đấu giá</span>
+          </ul>
+          <ul class="unstyle" *ngIf="check==true" >
+            <div *ngFor=" let Rankbider of  bider | slice:0:3; let i=index">
+            <li>
+              <span class="propertyname">{{user[i].firstname}} {{user[i].lastname}}</span>
+              <span class="product-price-bidders">${{bider[i].price_bid}}</span>
+            </li>
+            <!-- <li>
+              <span class="propertyname">Phát</span>
+              <span class="product-price-bidders">$52</span>
+            </li>
+            <li>
+              <span class="propertyname">Giang</span>
+              <span class="product-price-bidders">$50</span>
+            </li> -->
+            </div>
+          </ul>
+
+        </div>
+        <div class="properties-box">
+          <ul class="unstyle">
+            <!-- <li><b class="propertyname">Price:</b> ${{bannerPosit.min_price}}</li> -->
+            <li><b class="propertyname">Number of Bids:</b>${{bannerPosit.price_step}}</li>
+          </ul>
+          <input class="product-bids" type="text" placeholder="$0.00" #numberSubmit>
+          <p class="propertyname" style="margin-top: 2em;">{{thongbao}}</p>
+        </div>
+        <a (click)="onSubmit(numberSubmit.value)" class="btn btn-buynow">Submit a bid</a>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

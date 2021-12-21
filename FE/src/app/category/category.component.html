@@ -1,0 +1,57 @@
+<app-header></app-header>
+<section class="item content">
+  <div class="container toparea">
+    <div class="underlined-title">
+      <div class="editContent">
+        <h1 class="text-center latestitems">SẢN PHẨM CỦA CHÚNG TÔI</h1>
+      </div>
+      <div class="wow-hr type_short">
+        <span class="wow-hr-h">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </span>
+      </div>
+    </div>
+    <h1 class="text-center latestitems">{{web.name}}</h1>
+    <div class="column" *ngFor=" let product of  catePro | slice:0:catePro.length; let i=index">
+      <div *ngIf="product.auction_date!=null&&product.auction_status==1">
+        <div class="col-md-4">
+          <div class="productbox">
+            <div class="fadeshop">
+              <div class="captionshop text-center" style="display: none;">
+                <h3>{{product.name}}</h3>
+                <!-- <p>
+							 Nằm ở top của trang web
+						</p> -->
+                <p>
+                  <a (click)=Testchuyentrang(product.id) style="cursor:pointer;" class="learn-more detailslearn"><i
+                      class="fa fa-shopping-cart"></i> Đấu giá</a>
+                  <a (click)=Testchuyentrang(product.id) style="cursor:pointer;" class="learn-more detailslearn"><i
+                      class="fa fa-link"></i> Chi tiết</a>
+                </p>
+              </div>
+              <span class="maxproduct"><img src="../assets/images/product3.png" alt=""></span>
+            </div>
+            <div class="product-details">
+              <a (click)=Testchuyentrang(product.id) style="cursor:pointer;">
+                <h1>{{product.name}}</h1>
+              </a>
+              <span class="price">
+                <span class="edd_price">{{ngay[i]}} {{gio[i]}}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="check==false">
+      <div class="wow-hr type_short">
+        <span class="wow-hr-h">
+        </span>
+      </div >
+      <h1 class="text-center latestitems" style="margin-bottom:2em">KHÔNG CÓ SẢN PHẨM NÀO</h1>
+    </div>
+  </div>
+  <app-footer></app-footer>
+

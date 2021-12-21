@@ -1,0 +1,81 @@
+<app-header></app-header>
+	<!-- CONTENT =============================-->
+<div>
+	<section class="item content">\
+
+		<div class="container toparea">
+        <form>
+			<div class="underlined-title">
+				<div class="editContent">
+					<h1 class="text-center latestitems">Thiết lập thông tin cá nhân</h1>
+				</div>
+				<div class="wow-hr type_short">
+					<span class="wow-hr-h">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</span>
+				</div>
+			</div>
+		</form>
+			<div id="edd_account_form_wrap " class="col-md-8 col-md-offset-2">
+				<form id="edd_account_form" class="edd_form" action="#" method="POST">
+					<fieldset id="edd_checkout_user_info">
+						<legend>Personal Info</legend>
+						<div class="edd_account_form_info">
+							<p id="edd-first-name-wrap">
+								<label class="edd-label" for="edd-first">
+									Full Name <span class="edd-required-indicator">: </span>
+								</label>
+								<b>{{UserInfo.respnse.lastname}} {{UserInfo.respnse.firstname}}</b>
+							</p>
+						</div>
+						<div class="edd_checkout_user_more">
+							<p id="edd-email-wrap">
+								<label class="edd-label" for="edd-email">
+									Email Address <span class="edd-required-indicator">: </span></label>
+								<b>{{UserInfo.respnse.email}}</b>
+                </p>
+						</div>
+						<div class="edd_checkout_user_more">
+							<p id="edd-email-wrap">
+								<label class="edd-label" for="edd-email">
+									Your Address <span class="edd-required-indicator">: </span></label>
+                  <b>{{UserInfo.respnse.address}}</b>
+							</p>
+						</div>
+					</fieldset>
+					<fieldset id="edd_change_user_password">
+						<legend>Change Passwords</legend>
+						<div class="edd_password_form_info">
+							<p id="edd-current-password-wrap">
+								<label class="edd-label" for="edd-first">
+									Current Password <span class="edd-required-indicator">: </span>
+								</label>
+								<input class="edd-input required" type="passwordq" name="edd_first" placeholder="Current Password" id="edd-first" #Curpass value="" required="">
+							</p>
+							<p id="edd-new-password-wrap">
+								<label class="edd-label" for="edd-last">
+									New Password <span class="edd-required-indicator">: </span></label>
+								<input class="edd-input" type="password" name="edd_last" id="edd-last"
+									placeholder="New Password" #Newpass value="">
+							</p>
+						</div>
+					</fieldset>
+					<div *ngIf="thongbao!=''">
+						Lỗi: {{thongbao}}
+					</div>
+					<fieldset id="edd_confirm_submit">
+						<a type="submit" class="edd-submit button" id="edd-confirm-button" name="edd-confirm"
+							(click)="changePass(Curpass.value,Newpass.value)">Confirm</a>
+					</fieldset>
+          <fieldset id="edd_confirm_submit">
+					<a type="submit" class="edd-submit button" id="edd-confirm-button" style="cursor: pointer;" (click)="logout()" name="edd-confirm">Logout</a>
+					</fieldset>
+				</form>
+			</div>
+</div>
+<div class=paddding style="padding:3rem">
+
+</div>
+<app-footer></app-footer>

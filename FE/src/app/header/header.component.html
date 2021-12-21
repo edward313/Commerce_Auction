@@ -1,0 +1,62 @@
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<!-- HEADER =============================-->
+<header class="item header margin-top-0">
+  <div class="wrapper">
+    <nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a href="" class="navbar-brand brand"> AUCTION </a>
+        </div>
+        <div id="navbar-collapse-02" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="propClone"><a [routerLink]="['/home']">Trang chủ</a></li>
+            <li class="propClone nav-list"><a [routerLink]="['/categogy/1']">Danh mục</a>
+              <ul class="subnav">
+                <div *ngFor=" let webName of  WebData | slice:0:WebData.length; let i=index">
+                  <li>
+                    <a (click)=chuyenTrang(webName.id) >{{webName.name}}</a>
+                  </li>
+                </div>
+                <!-- (click)=chuyenTrang(webName.id) -->
+                <!-- <li>
+								<a [routerLink]="['/categogy']">Zing News</a>
+							</li>
+							<li>
+								<a [routerLink]="['/categogy']">Zing News</a>
+							</li>
+							<li>
+								<a [routerLink]="['/categogy']">Zing News</a>
+							</li>
+							<li>
+								<a [routerLink]="['/categogy']">Zing News</a>
+							</li> -->
+              </ul>
+            </li>
+            <li class="propClone"><a style="cursor:pointer;" [routerLink]="['/payment']">Thanh toán</a></li>
+            <li class="propClone"><a style="cursor:pointer;" [routerLink]="['/account']">Thông tin cá nhân</a></li>
+            <li class="propClone"><a style="cursor:pointer;" (click)="checkUser()">Đăng kí/ Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="text-homeimage">
+            <div class="maintext-image" data-scrollreveal="enter top over 1.5s after 0.1s">
+              CHẠY QUẢNG CÁO BANNER
+            </div>
+            <div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.3s">
+              PHÁT TRIỂN CÙNG VỚI AUCTION
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
